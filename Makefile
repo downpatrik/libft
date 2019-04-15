@@ -6,7 +6,7 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/07 12:47:46 by wvenita           #+#    #+#              #
-#    Updated: 2019/04/14 23:09:32 by wvenita          ###   ########.fr        #
+#    Updated: 2019/04/15 22:23:10 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,9 @@ OBJ = \
 		ft_lstdel.o\
 		ft_lstadd.o\
 		ft_lstiter.o\
-		ft_lstmap.o
+		ft_lstmap.o\
+		ft_isxdigit.o\
+		ft_atof.o
 
 all: $(NAME)
 

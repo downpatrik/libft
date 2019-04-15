@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 21:04:39 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/08 21:05:39 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/15 22:05:53 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int	tmp;
+	t_i64	tmp;
 
 	tmp = n;
 	if (n < 0)

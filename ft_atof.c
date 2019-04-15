@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/07 16:16:03 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/15 21:47:51 by wvenita          ###   ########.fr       */
+/*   Created: 2019/04/15 22:18:15 by wvenita           #+#    #+#             */
+/*   Updated: 2019/04/15 22:39:47 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+double	ft_atof(const char *str)
 {
-	if (ap && *ap)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
+	double	res1;
+	double	res2;
+	int		minus;
+	int		i;
+
+	res1 = 0.0;
+	res2 = 0.0;
+	minus = 1;
+	i = 1;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
+		minus = 45 % *str++ - 1;
+	while (ft_isdigit(*str))
+		res1 = res1 * 10 + *str++ - '0';
+	if (*str++ == '.')
+		while (ft_isdigit(*str))
+			res2 = res2 + (*str++ - '0') / ft_pow(10, i++);
+	return (double)(minus * (res1 + res2));
 }

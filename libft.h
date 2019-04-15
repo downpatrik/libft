@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 12:37:49 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/14 22:56:23 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/15 22:23:01 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,10 @@ int						ft_pow(int nb, int power);
 int						ft_isspace(int c);
 int						ft_isupper(int c);
 int						ft_islower(int c);
-int						ft_strnlen(char *str, size_t size);
+int						ft_isxdigit(int c);
+size_t					ft_strnlen(char *str, size_t size);
 int						ft_abs(int c);
+double					ft_atof(const char *str);
 void					*ft_memrcpy(void *dest, const void *src, size_t n);
 
 void					*ft_memalloc(size_t size);
