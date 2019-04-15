@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 22:18:15 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/15 22:39:47 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/15 23:53:18 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ double	ft_atof(const char *str)
 	if (*str++ == '.')
 		while (ft_isdigit(*str))
 			res2 = res2 + (*str++ - '0') / ft_pow(10, i++);
-	return (double)(minus * (res1 + res2));
+	return (minus * (res1 + res2));
 }

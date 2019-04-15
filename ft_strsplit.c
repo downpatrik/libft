@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:18:30 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/15 22:44:14 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/16 00:08:51 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ static int	ft_strwordlen(char const *s, char c)
 	return (i);
 }
 
-static int	ft_wordcount(char const *s, char c)
+static size_t	ft_wordcount(char const *s, char c)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (i);
 	while (*s)
 	{
 		if (*s == c)
@@ -50,7 +52,7 @@ char		**ft_strsplit(char const *s, char c)
 	j = -1;
 	if (!(mas = (char**)malloc(sizeof(char*) * (ft_wordcount(s, c) + 1))))
 		return (NULL);
-	while (*s)
+	while (s && *s)
 	{
 		if (*s == c)
 			s++;

@@ -6,13 +6,13 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 21:50:41 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/11 23:55:34 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/15 23:25:55 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	while ((t_u8)*s1 == (t_u8)*s2 && *s1)
 	{

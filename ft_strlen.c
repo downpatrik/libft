@@ -6,13 +6,13 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 21:33:58 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/14 21:58:37 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/15 23:35:59 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *c)
+size_t	ft_strlen(const char *c)
 {
 	size_t		i;
 
