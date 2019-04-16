@@ -6,13 +6,13 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:18:30 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/16 00:08:51 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/16 23:04:43 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strwordlen(char const *s, char c)
+static int		ft_strwordlen(char const *s, char c)
 {
 	int		i;
 
@@ -43,7 +43,7 @@ static size_t	ft_wordcount(char const *s, char c)
 	return (i);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**mas;
 	int		i;

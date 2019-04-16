@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/14 21:07:17 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/16 23:04:55 by wvenita          ###   ########.fr       */
+/*   Created: 2019/04/16 23:13:01 by wvenita           #+#    #+#             */
+/*   Updated: 2019/04/16 23:25:38 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_abs(int c)
+char	*ft_strrev(char *str)
 {
-	if (c == -2147483648)
-		return (c);
-	return (c > 0 ? c : -c);
+	char	*new_str;
+	char	*tmp;
+	size_t	size;
+
+	size = ft_strlen(str);
+	if (!(new_str = (char*)malloc(sizeof(char) * (size + 1))))
+		return (NULL);
+	new_str[size] = '\0';
+	tmp = new_str;
+	while (size--)
+		*tmp++ = *(str + size);
+	return (new_str);
 }

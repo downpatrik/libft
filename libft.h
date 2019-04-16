@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 12:37:49 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/15 23:50:37 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/16 23:25:56 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ char					*ft_strncpy(char *dest, const char *src, size_t n);
 char					*ft_strcat(char *dest, const char *src);
 char					*ft_strncat(char *dest, const char *src, size_t nb);
 size_t					ft_strlcat(char *dest, const char *src, size_t size);
-char					*ft_strnstr(const char *str, const char *to_find, size_t nb);
+char					*ft_strnstr(const char *str,
+							const char *to_find, size_t nb);
 char					*ft_strstr(const char *str, const char *to_find);
 char					*ft_strchr(const char *s, int c);
 char					*ft_strrchr(const char *s, int c);
@@ -97,6 +98,7 @@ void					ft_strclr(char *s);
 void					*ft_memalloc(size_t size);
 void					ft_memdel(void **ap);
 char					*ft_strnew(size_t size);
+char					*ft_strrev(char *str);
 void					ft_strdel(char **as);
 void					ft_strclr(char *s);
 void					ft_striter(char *s, void (*f)(char *));
