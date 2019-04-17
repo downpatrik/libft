@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/14 23:04:59 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/14 23:08:01 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/17 22:29:06 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (!lst)
+	if (!lst || !f)
 		return ;
 	(*f)(lst);
 	ft_lstiter(lst->next, f);

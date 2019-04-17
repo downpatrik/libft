@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 17:00:17 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/15 00:05:48 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/17 23:08:55 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ int	ft_strequ(char const *s1, char const *s2)
 		return (!s2);
 	if (!s2)
 		return (0);
-	return (ft_strcmp((char*)s1, (char*)s2) == 0);
+	return (ft_strcmp(s1, s2) == 0);
 }

@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 16:50:08 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/14 21:59:05 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/17 23:09:42 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*arr;
 	int		i;
 
-	if (!s || !f || !(arr = ft_strnew(ft_strlen((char*)s))))
+	if (!s || !f || !(arr = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	i = 0;
 	while (*s)

@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 22:18:15 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/15 23:53:18 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/18 00:13:52 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,27 @@
 
 double	ft_atof(const char *str)
 {
-	double	res1;
-	double	res2;
+	double	res;
 	int		minus;
-	int		i;
+	int		exp;
 
-	res1 = 0.0;
-	res2 = 0.0;
+	res = 0.0;
 	minus = 1;
-	i = 1;
+	exp = 1;
 	while (ft_isspace(*str))
 		str++;
 	if (*str == '-' || *str == '+')
 		minus = 45 % *str++ - 1;
 	while (ft_isdigit(*str))
-		res1 = res1 * 10 + *str++ - '0';
+		res = res * 10 + *str++ - '0';
 	if (*str++ == '.')
 		while (ft_isdigit(*str))
-			res2 = res2 + (*str++ - '0') / ft_pow(10, i++);
-	return (minus * (res1 + res2));
+			res = res + (*str++ - '0') / ft_pow(10, exp++);
+	if ((*str == 'e' || *str == 'E') && str++)
+	{
+		exp = ft_atoi(str);
+		exp = (exp > 0) ? ft_pow(10, exp) : (1 / ft_pow(10, exp));
+		res *= exp;
+	}
+	return (minus * res);
 }

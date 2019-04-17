@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 20:37:02 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/09 21:44:00 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/17 23:07:13 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
+	if (!s)
+		return ;
 	while (*s)
 		ft_putchar(*s++);
 }

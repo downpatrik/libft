@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:00:41 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/16 00:05:17 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/17 23:09:17 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (i)
 		ft_strcpy(arr, s1);
 	if (j)
-		ft_strcpy(arr + i, s2);
+		ft_strcat(arr, s2);
 	arr[size] = '\0';
 	return (arr);
 }

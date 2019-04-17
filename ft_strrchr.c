@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 13:25:17 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/12 00:31:29 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/17 22:01:18 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char*)s);
 	while (str <= s)
 		if (*s-- == c)
-			return ((char*)s + 1);
+			return ((char*)++s);
 	return (NULL);
 }

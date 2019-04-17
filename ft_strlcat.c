@@ -6,7 +6,7 @@
 /*   By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 22:01:56 by wvenita           #+#    #+#             */
-/*   Updated: 2019/04/14 22:11:31 by wvenita          ###   ########.fr       */
+/*   Updated: 2019/04/17 23:09:29 by wvenita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	dsize;
 	size_t	k;
 
-	ssize = ft_strlen((char*)src);
+	ssize = ft_strlen(src);
 	dsize = ft_strnlen(dest, size);
 	if (dsize == size)
 		return (dsize + ssize);
